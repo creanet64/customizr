@@ -110,7 +110,7 @@ var czrapp = czrapp || {};
 (function($, czrapp) {
   var _methods = {
     emit : function( cbs, args ) {
-      console.log('in emit :  cbs, args',  cbs, this);
+      //console.log('in emit :  cbs, args',  cbs, this);
       cbs = _.isArray(cbs) ? cbs : [cbs];
       var self = this;
       _.map( cbs, function(cb) {
@@ -135,7 +135,7 @@ var czrapp = czrapp || {};
     },//end of fn
 
     isUserLogged     : function() {
-      return czrapp.$_body.hasClass('logged-in') || 0 !== this.$_wpadminbar.length;
+      return czrapp.$_body.hasClass('logged-in') || 0 !== czrapp.$_wpadminbar.length;
     },
 
     isCustomizing    : function() {
